@@ -87,11 +87,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_addMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_addMaterial.Designer.cs">
+      <DependentUpon>UC_addMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_addSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_addSupplier.Designer.cs">
       <DependentUpon>UC_addSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Faculty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Faculty.Designer.cs">
+      <DependentUpon>UC_Faculty.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
@@ -99,11 +111,29 @@
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Material.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Material.Designer.cs">
+      <DependentUpon>UC_Material.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Supplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_Supplier.Designer.cs">
       <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_updateMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_updateMaterial.Designer.cs">
+      <DependentUpon>UC_updateMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_updateSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_updateSupplier.Designer.cs">
+      <DependentUpon>UC_updateSupplier.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formChangePass.resx">
       <DependentUpon>formChangePass.cs</DependentUpon>
@@ -127,14 +157,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_addMaterial.resx">
+      <DependentUpon>UC_addMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_addSupplier.resx">
       <DependentUpon>UC_addSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Faculty.resx">
+      <DependentUpon>UC_Faculty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Material.resx">
+      <DependentUpon>UC_Material.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Supplier.resx">
       <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_updateMaterial.resx">
+      <DependentUpon>UC_updateMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_updateSupplier.resx">
+      <DependentUpon>UC_updateSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

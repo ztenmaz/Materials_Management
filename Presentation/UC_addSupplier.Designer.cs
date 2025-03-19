@@ -36,7 +36,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txbAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txbGmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txbPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -138,24 +138,24 @@
             this.guna2HtmlLabel3.TabIndex = 11;
             this.guna2HtmlLabel3.Text = "Địa chỉ";
             // 
-            // txbGmail
+            // txbEmail
             // 
-            this.txbGmail.BorderRadius = 6;
-            this.txbGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbGmail.DefaultText = "";
-            this.txbGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbGmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbGmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbGmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbGmail.Location = new System.Drawing.Point(266, 152);
-            this.txbGmail.Name = "txbGmail";
-            this.txbGmail.PlaceholderText = "";
-            this.txbGmail.SelectedText = "";
-            this.txbGmail.Size = new System.Drawing.Size(200, 30);
-            this.txbGmail.TabIndex = 14;
+            this.txbEmail.BorderRadius = 6;
+            this.txbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbEmail.DefaultText = "";
+            this.txbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbEmail.Location = new System.Drawing.Point(266, 152);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.PlaceholderText = "";
+            this.txbEmail.SelectedText = "";
+            this.txbEmail.Size = new System.Drawing.Size(200, 30);
+            this.txbEmail.TabIndex = 14;
             // 
             // guna2HtmlLabel4
             // 
@@ -163,9 +163,9 @@
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(266, 127);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(37, 19);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(35, 19);
             this.guna2HtmlLabel4.TabIndex = 13;
-            this.guna2HtmlLabel4.Text = "Gmail";
+            this.guna2HtmlLabel4.Text = "Email";
             // 
             // txbPhone
             // 
@@ -212,6 +212,7 @@
             this.btnSave.Size = new System.Drawing.Size(174, 35);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // guna2DragControl1
             // 
@@ -235,6 +236,7 @@
             this.btnCancel.Size = new System.Drawing.Size(174, 35);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Hủy";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // UC_addSupplier
             // 
@@ -244,7 +246,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txbPhone);
             this.Controls.Add(this.guna2HtmlLabel5);
-            this.Controls.Add(this.txbGmail);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txbAddress);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -268,7 +270,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txbAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txbGmail;
+        private Guna.UI2.WinForms.Guna2TextBox txbEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txbPhone;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;

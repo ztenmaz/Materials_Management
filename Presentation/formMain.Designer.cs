@@ -32,6 +32,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,15 +45,15 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.txbSupplier = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.txbHome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSupplier = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMaterial = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.UC_Home = new Presentation.UC_Home();
             this.UC_Suplier = new Presentation.UC_Supplier();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.UC_Material = new Presentation.UC_Material();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -88,6 +89,17 @@
             this.lbTime.Size = new System.Drawing.Size(126, 17);
             this.lbTime.TabIndex = 4;
             this.lbTime.Text = "guna2HtmlLabel1";
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.Gray;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(595, 0);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.TabIndex = 3;
             // 
             // guna2ControlBox2
             // 
@@ -151,9 +163,9 @@
             this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.guna2Button5);
             this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.txbSupplier);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.txbHome);
+            this.panel1.Controls.Add(this.btnSupplier);
+            this.panel1.Controls.Add(this.btnMaterial);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2Separator1);
@@ -291,86 +303,87 @@
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // txbSupplier
+            // btnSupplier
             // 
-            this.txbSupplier.BackColor = System.Drawing.Color.White;
-            this.txbSupplier.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.txbSupplier.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
-            this.txbSupplier.CheckedState.FillColor = System.Drawing.Color.White;
-            this.txbSupplier.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.txbSupplier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txbSupplier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txbSupplier.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txbSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txbSupplier.FillColor = System.Drawing.Color.White;
-            this.txbSupplier.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.txbSupplier.Image = global::Presentation.Properties.Resources.icon_supplier;
-            this.txbSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbSupplier.ImageOffset = new System.Drawing.Point(15, 0);
-            this.txbSupplier.Location = new System.Drawing.Point(0, 161);
-            this.txbSupplier.Name = "txbSupplier";
-            this.txbSupplier.PressedDepth = 0;
-            this.txbSupplier.Size = new System.Drawing.Size(180, 45);
-            this.txbSupplier.TabIndex = 9;
-            this.txbSupplier.Text = "Quản lý nhà cung cấp";
-            this.txbSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbSupplier.TextOffset = new System.Drawing.Point(15, 0);
-            this.txbSupplier.CheckedChanged += new System.EventHandler(this.txbSupplier_CheckedChanged);
+            this.btnSupplier.BackColor = System.Drawing.Color.White;
+            this.btnSupplier.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSupplier.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
+            this.btnSupplier.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnSupplier.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSupplier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSupplier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSupplier.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSupplier.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSupplier.FillColor = System.Drawing.Color.White;
+            this.btnSupplier.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnSupplier.Image = global::Presentation.Properties.Resources.icon_supplier;
+            this.btnSupplier.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSupplier.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 161);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.PressedDepth = 0;
+            this.btnSupplier.Size = new System.Drawing.Size(180, 45);
+            this.btnSupplier.TabIndex = 9;
+            this.btnSupplier.Text = "Quản lý nhà cung cấp";
+            this.btnSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSupplier.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnSupplier.CheckedChanged += new System.EventHandler(this.btnSupplier_CheckedChanged);
             // 
-            // guna2Button2
+            // btnMaterial
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.White;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.guna2Button2.Image = global::Presentation.Properties.Resources.icon_box;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 116);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedDepth = 0;
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 8;
-            this.guna2Button2.Text = "Quản lý vật tư";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnMaterial.BackColor = System.Drawing.Color.White;
+            this.btnMaterial.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnMaterial.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
+            this.btnMaterial.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnMaterial.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMaterial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaterial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMaterial.FillColor = System.Drawing.Color.White;
+            this.btnMaterial.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnMaterial.Image = global::Presentation.Properties.Resources.icon_box;
+            this.btnMaterial.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMaterial.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnMaterial.Location = new System.Drawing.Point(0, 116);
+            this.btnMaterial.Name = "btnMaterial";
+            this.btnMaterial.PressedDepth = 0;
+            this.btnMaterial.Size = new System.Drawing.Size(180, 45);
+            this.btnMaterial.TabIndex = 8;
+            this.btnMaterial.Text = "Quản lý vật tư";
+            this.btnMaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMaterial.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnMaterial.CheckedChanged += new System.EventHandler(this.btnMaterial_CheckedChanged);
             // 
-            // txbHome
+            // btnHome
             // 
-            this.txbHome.BackColor = System.Drawing.Color.White;
-            this.txbHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.txbHome.Checked = true;
-            this.txbHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
-            this.txbHome.CheckedState.FillColor = System.Drawing.Color.White;
-            this.txbHome.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.txbHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txbHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txbHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txbHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txbHome.FillColor = System.Drawing.Color.White;
-            this.txbHome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.txbHome.Image = global::Presentation.Properties.Resources.icon_home;
-            this.txbHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbHome.ImageOffset = new System.Drawing.Point(15, 0);
-            this.txbHome.Location = new System.Drawing.Point(0, 71);
-            this.txbHome.Name = "txbHome";
-            this.txbHome.PressedDepth = 0;
-            this.txbHome.Size = new System.Drawing.Size(180, 45);
-            this.txbHome.TabIndex = 7;
-            this.txbHome.Text = "Trang chủ";
-            this.txbHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbHome.TextOffset = new System.Drawing.Point(15, 0);
-            this.txbHome.CheckedChanged += new System.EventHandler(this.txbHome_CheckedChanged);
+            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHome.Checked = true;
+            this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
+            this.btnHome.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.White;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnHome.Image = global::Presentation.Properties.Resources.icon_home;
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnHome.Location = new System.Drawing.Point(0, 71);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.PressedDepth = 0;
+            this.btnHome.Size = new System.Drawing.Size(180, 45);
+            this.btnHome.TabIndex = 7;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnHome.CheckedChanged += new System.EventHandler(this.txbHome_CheckedChanged);
             // 
             // guna2CirclePictureBox1
             // 
@@ -388,11 +401,16 @@
             // 
             this.guna2Panel2.Controls.Add(this.UC_Home);
             this.guna2Panel2.Controls.Add(this.UC_Suplier);
+            this.guna2Panel2.Controls.Add(this.UC_Material);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(180, 29);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(724, 483);
             this.guna2Panel2.TabIndex = 4;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UC_Home
             // 
@@ -413,20 +431,14 @@
             this.UC_Suplier.Size = new System.Drawing.Size(724, 483);
             this.UC_Suplier.TabIndex = 1;
             // 
-            // timer1
+            // UC_Material
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.Gray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(595, 0);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox3.TabIndex = 3;
+            this.UC_Material.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.UC_Material.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_Material.Location = new System.Drawing.Point(0, 0);
+            this.UC_Material.Name = "UC_Material";
+            this.UC_Material.Size = new System.Drawing.Size(724, 483);
+            this.UC_Material.TabIndex = 1;
             // 
             // formMain
             // 
@@ -459,15 +471,16 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button txbSupplier;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button txbHome;
+        private Guna.UI2.WinForms.Guna2Button btnSupplier;
+        private Guna.UI2.WinForms.Guna2Button btnMaterial;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private UC_Supplier UC_Suplier;
         private UC_Home UC_Home;
+        private UC_Material UC_Material;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;

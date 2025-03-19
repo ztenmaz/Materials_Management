@@ -12,36 +12,98 @@ namespace BusinessLogicLayer
     public class SupplierBLL
     {
         private SupplierDAL supplierDAL = new SupplierDAL();
-        public List<Supplier> GetAllSuppliers()
+        public List<Supplier> GetAllSuppliers(string keyword = null)
         {
-            return supplierDAL.GetSuppliers();
+            return supplierDAL.GetSuppliers(keyword);
         }
 
-        public bool AddSupplier(Supplier supplier)
+        public bool AddSupplier(Supplier supplier, out string errorMessage)
         {
-            bool isSuccess = false;
-
             if (string.IsNullOrEmpty(supplier.supplierName))
             {
-                throw new Exception("Tên nhà cung cấp không được để trống!");
+                errorMessage = "Tên nhà cung cấp không được để trống!";
+                return false;
             }
 
             if (!IsValidPhoneNumber(supplier.phone))
             {
-                throw new Exception("Số điện thoại không hợp lệ!");
+                errorMessage = "Số điện thoại không hợp lệ!";
+                return false;
             }
 
             if (!IsValidEmail(supplier.email))
             {
-                throw new Exception("Email không hợp lệ!");
+                errorMessage = "Email không hợp lệ!";
+                return false;
             }
 
-            isSuccess = supplierDAL.AddSupplier(supplier);
+            bool isAdded = supplierDAL.AddSupplier(supplier);
 
-            return isSuccess;
+            if (!isAdded)
+            {
+                errorMessage = "Thêm nhà cung cấp thất bại!";
+                return false;
+            }
+
+            errorMessage = null; // Không có lỗi
+            return true;
         }
 
+        public bool UpdateSupplier(Supplier supplier, out string errorMessage)
+        {
+            if (string.IsNullOrEmpty(supplier.supplierName))
+            {
+                errorMessage = "Tên nhà cung cấp không được để trống!";
+                return false;
+            }
 
+            if (!IsValidPhoneNumber(supplier.phone))
+            {
+                errorMessage = "Số điện thoại không hợp lệ!";
+                return false;
+            }
+
+            if (!IsValidEmail(supplier.email))
+            {
+                errorMessage = "Email không hợp lệ!";
+                return false;
+            }
+
+            bool isUpdated = supplierDAL.UpdateSupplier(supplier);
+
+            if (!isUpdated)
+            {
+                errorMessage = "Cập nhật nhà cung cấp thất bại!";
+                return false;
+            }
+
+            errorMessage = null; // Không có lỗi
+            return true;
+        }
+
+        public bool DeleteSupplier(int idSupplier, out string errorMessage)
+        {
+            // Kiểm tra xem nhà cung cấp có đang được sử dụng không
+            bool isUsed = supplierDAL.CheckSupplierInUse(idSupplier);
+
+            if (isUsed)
+            {
+                errorMessage = "Nhà cung cấp đang được sử dụng, không thể xóa!";
+                return false;
+            }
+
+            // Gọi DAL để xóa
+            bool isDeleted = supplierDAL.DeleteSupplier(idSupplier);
+
+            if (!isDeleted)
+            {
+                errorMessage = "Xóa nhà cung cấp thất bại!";
+                return false;
+            }
+
+            errorMessage = null;
+            return true;
+        }
 
         private static bool IsValidEmail(string email)
         {

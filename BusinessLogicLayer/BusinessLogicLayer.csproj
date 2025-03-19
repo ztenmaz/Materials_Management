@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountBLL.cs" />
+    <Compile Include="MaterialBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendCodeToEmail.cs" />
     <Compile Include="SupplierBLL.cs" />

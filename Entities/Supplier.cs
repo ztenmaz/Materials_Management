@@ -8,6 +8,7 @@ namespace Entities
 {
     public class Supplier
     {
+        public int supplierId { get; set; }
         public string displayIdSupplier { get; set; }
         public string supplierName { get; set; }
         public string address { get; set; }

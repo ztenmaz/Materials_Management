@@ -19,18 +19,10 @@ namespace Presentation
 
         private void txbHome_CheckedChanged(object sender, EventArgs e)
         {
-            if(txbHome.Checked)
+            if(btnHome.Checked)
             {
                 UC_Home.BringToFront();
             }    
-        }
-
-        private void txbSupplier_CheckedChanged(object sender, EventArgs e)
-        {
-            if (txbSupplier.Checked)
-            {
-                UC_Suplier.BringToFront();
-            }
         }
 
         private void formMain_Load(object sender, EventArgs e)
@@ -46,6 +38,22 @@ namespace Presentation
         private void UC_Home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSupplier_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnSupplier.Checked)
+            {
+                UC_Suplier.BringToFront();
+            }
+        }
+
+        private void btnMaterial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnMaterial.Checked)
+            {
+                UC_Material.BringToFront();
+            }
         }
     }
 }

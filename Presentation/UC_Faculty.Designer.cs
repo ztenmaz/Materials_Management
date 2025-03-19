@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class UC_Supplier
+    partial class UC_Faculty
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.idMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,45 +52,45 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(110)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(229, 0);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(284, 0);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(188, 23);
-            this.guna2HtmlLabel1.TabIndex = 6;
-            this.guna2HtmlLabel1.Text = "Danh sách nhà cung cấp";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(131, 23);
+            this.guna2HtmlLabel1.TabIndex = 18;
+            this.guna2HtmlLabel1.Text = "Danh sách vật tư";
             // 
             // dgvTable
             // 
             this.dgvTable.AllowUserToAddRows = false;
             this.dgvTable.AllowUserToDeleteRows = false;
             this.dgvTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(90)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idMaterial,
+            this.nameMaterial,
             this.idSupplier,
-            this.supplierName,
-            this.phone,
-            this.email,
-            this.address});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle6;
+            this.quantity,
+            this.unit});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTable.Location = new System.Drawing.Point(0, 91);
             this.dgvTable.MultiSelect = false;
@@ -99,7 +99,7 @@
             this.dgvTable.RowHeadersVisible = false;
             this.dgvTable.RowHeadersWidth = 25;
             this.dgvTable.Size = new System.Drawing.Size(740, 372);
-            this.dgvTable.TabIndex = 5;
+            this.dgvTable.TabIndex = 17;
             this.dgvTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTable.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -122,36 +122,6 @@
             this.dgvTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // idSupplier
-            // 
-            this.idSupplier.HeaderText = "Mã NCC";
-            this.idSupplier.Name = "idSupplier";
-            this.idSupplier.ReadOnly = true;
-            // 
-            // supplierName
-            // 
-            this.supplierName.HeaderText = "Tên NCC";
-            this.supplierName.Name = "supplierName";
-            this.supplierName.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Điện thoại";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            // 
             // txbSearch
             // 
             this.txbSearch.BorderRadius = 6;
@@ -171,8 +141,7 @@
             this.txbSearch.PlaceholderText = "Nhập tên cần tìm";
             this.txbSearch.SelectedText = "";
             this.txbSearch.Size = new System.Drawing.Size(266, 33);
-            this.txbSearch.TabIndex = 10;
-            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            this.txbSearch.TabIndex = 22;
             // 
             // btnDelete
             // 
@@ -191,9 +160,8 @@
             this.btnDelete.Location = new System.Drawing.Point(261, 39);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 33);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Xoá";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -212,9 +180,8 @@
             this.btnUpdate.Location = new System.Drawing.Point(135, 39);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 33);
-            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -233,21 +200,50 @@
             this.btnAdd.Location = new System.Drawing.Point(13, 39);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 33);
-            this.btnAdd.TabIndex = 7;
+            this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // UC_Supplier
+            // idMaterial
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.idMaterial.HeaderText = "Mã vật tư";
+            this.idMaterial.Name = "idMaterial";
+            this.idMaterial.ReadOnly = true;
+            // 
+            // nameMaterial
+            // 
+            this.nameMaterial.HeaderText = "Tên vật tư";
+            this.nameMaterial.Name = "nameMaterial";
+            this.nameMaterial.ReadOnly = true;
+            // 
+            // idSupplier
+            // 
+            this.idSupplier.HeaderText = "Nhà cung cấp";
+            this.idSupplier.Name = "idSupplier";
+            this.idSupplier.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Số lượng";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // unit
+            // 
+            this.unit.HeaderText = "Đơn vị";
+            this.unit.Name = "unit";
+            this.unit.ReadOnly = true;
+            // 
+            // UC_Faculty
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.dgvTable);
             this.Controls.Add(this.txbSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.dgvTable);
-            this.Name = "UC_Supplier";
+            this.Name = "UC_Faculty";
             this.Size = new System.Drawing.Size(740, 463);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.ResumeLayout(false);
@@ -256,16 +252,17 @@
         }
 
         #endregion
+
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTable;
-        private Guna.UI2.WinForms.Guna2TextBox txbSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSupplier;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unit;
+        private Guna.UI2.WinForms.Guna2TextBox txbSearch;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }
