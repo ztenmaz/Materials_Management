@@ -1,0 +1,38 @@
+# Loại bỏ thư mục build
+bin/
+obj/
+
+# Thư mục phát sinh của Visual Studio
+.vs/
+.vscode/
+
+# Các tệp cài đặt của Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Tệp cấu hình build
+*.csproj.user
+*.csproj*.old
+
+# Gói NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Tệp log và cache
+*.log
+*.cache
+
+# Tệp xuất bản
+publish/
+**/app.publish/
+
+# Tệp tạm thời
+*.tmp
+*.bak
+
+# Tệp liên quan đến ReSharper
+_ReSharper*/
+*.DotSettings.user
